@@ -1,6 +1,5 @@
 package com.matmazur.angular.rest;
 
-
 import com.matmazur.angular.data.ProductRepository;
 import com.matmazur.angular.model.Product;
 
@@ -18,7 +17,6 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 public class ProductEndpoint {
 
-
     @Inject
     ProductRepository repository;
 
@@ -33,7 +31,6 @@ public class ProductEndpoint {
             return Response.noContent().build();
         }
     }
-
 
     @GET
     @Path("/{id}")
@@ -54,5 +51,4 @@ public class ProductEndpoint {
         repository.save(product);
         return Response.accepted(product).build();
     }
-
 }
