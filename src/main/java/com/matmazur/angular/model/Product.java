@@ -4,8 +4,8 @@ import javax.persistence.*;
 
 @Entity
 @NamedQueries({
-        @NamedQuery(name = "findAll", query = "select p from Product p"),
-        @NamedQuery(name= "findById", query = "select p from Product p where p.id=:id")
+        @NamedQuery(name = "Product.findAll", query = "select p from Product p"),
+        @NamedQuery(name= "Product.findById", query = "select p from Product p where p.id=:id")
 })
 public class Product {
 
