@@ -29,8 +29,7 @@ public class ProductRepository {
         return query.getResultList().get(0);
     }
 
-    public Long save(Product product){
+    public void save(Product product){
         entityManager.persist(product);
-        return product.getId();
     }
 }
