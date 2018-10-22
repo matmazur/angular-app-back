@@ -8,9 +8,12 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title>$Title$</title>
+    <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <title>Angular test app</title>
   </head>
   <body>
-  $END$
+
+
   </body>
 </html>

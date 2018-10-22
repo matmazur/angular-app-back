@@ -1,0 +1,17 @@
+{
+  "name": "angular-app-front",
+  "homepage": "https://github.com/matmazur/angular-app-front",
+  "authors": [
+    "Bingo Bobo <matmazur90@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
