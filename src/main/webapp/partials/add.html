@@ -1,0 +1,7 @@
+<h1>Add new product</h1>
+<form>
+    <input type="text" ng-model="addCtrl.product.name" placeholder="name"><br>
+    <input type="text" ng-model="addCtrl.product.producer" placeholder="producer"><br>
+    <input type="text" ng-model="addCtrl.product.kcal" placeholder="kcal (numbers only)"><br>
+    <button type="button" ng-click="addCtrl.addProduct(addCtrl.product)">Save</button>
+</form>

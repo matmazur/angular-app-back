@@ -12,21 +12,16 @@
 </head>
 <body>
 
+
+<a href="#list">Homepage</a>
+<a href="#add">Add New Product</a>
+
+
+<div ng-view></div>
+
 <div ng-controller="ProductController as ctrl">
 
-    <form>
-        <input type="text" ng-model="ctrl.product.name" placeholder="name"><br>
-        <input type="text" ng-model="ctrl.product.producer" placeholder="producer"><br>
-        <input type="text" ng-model="ctrl.product.kcal" placeholder="kcal (numbers only)"><br>
-        <button type="button" ng-click="ctrl.addProduct(ctrl.product)">Save</button>
-    </form>
 
-    <h2>Products in stock:</h2>
-    <ul>
-        <li ng-repeat="p in ctrl.products" ng-mouseenter="ctrl.loadById(p.id)" ng-mouseleave="ctrl.zeroDown()">
-            {{p.name}}
-        </li>
-    </ul>
 
     <div ng-show="ctrl.details">
         <h2> {{ctrl.details.name}}</h2>
