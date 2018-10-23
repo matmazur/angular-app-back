@@ -4,7 +4,7 @@ angular.module("app")
         console.log("dot");
         var vm = this;
 
-        var Product = $resource('api/products');
+        var Product = $resource('api/products/:productId');
         vm.product = new Product();
         console.log("dot");
 
