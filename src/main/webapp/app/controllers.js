@@ -1,7 +1,12 @@
 angular.module("app")
-    .controller("ProductController", function ($http) {
+    .controller("ProductController", function ($http, $resource) {
 
         var vm = this;
+
+        var Result = $resource('api/products');
+
+
+
 
         function refreshData() {
 
