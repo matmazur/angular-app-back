@@ -4,7 +4,7 @@ angular.module("app")
         console.log("dot");
         var vm = this;
 
-        var Result = $resource('api/products');
+        var Product = $resource('api/products');
         vm.product = new Product();
         console.log("dot");
 
@@ -13,11 +13,10 @@ angular.module("app")
             console.log("dot");
 
 
-            vm.products = Result.query(
+            vm.products = Product.query(
                 function success(data, headers) {
-                    $log("fdsfsfsd");
                     console.log("Acquired data: " + data);
-                    console.log("Acquired headers: " + headers);
+                    console.log("Acquired headers: " + headers("Content-Type"));
                 },
                 function error(response) {
                     console.log(response.status);
@@ -30,7 +29,7 @@ angular.module("app")
 
             console.log(vm.product.__proto__);
 
-            vm.product.save(function (data) {
+            vm.product.$save(function (data) {
                 refreshData();
                 vm.product = new Product();
             });
