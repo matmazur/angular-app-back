@@ -33,9 +33,12 @@ angular.module("app")
                 refreshData();
                 vm.product = new Product();
             });
-
-
         };
+
+        vm.loadById = function(id){
+            vm.details = Product.get({productId:id});
+        };
+
         refreshData();
     });
 
