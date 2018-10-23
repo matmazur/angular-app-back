@@ -1,7 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
+<!Doctype html>
 <html ng-app="app">
 <head>
     <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/controllers.js"></script>
 
