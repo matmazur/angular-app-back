@@ -8,10 +8,8 @@ angular.module("app")
         vm.product = new Product();
         console.log("dot");
 
-
         function refreshData() {
             console.log("dot");
-
 
             vm.products = Product.query(
                 function success(data, headers) {
@@ -21,8 +19,6 @@ angular.module("app")
                 function error(response) {
                     console.log(response.status);
                 });
-
-
         }
 
         vm.addProduct = function (product) {
@@ -45,14 +41,3 @@ angular.module("app")
 
         refreshData();
     });
-
-
-/*
-$http.post("api/products", product)
-                .then(function success(response) {
-                    refreshData();
-                    vm.product = {};
-                }, function error(response) {
-                    console.log('Data not saved ' + product);
-                });
-                */
