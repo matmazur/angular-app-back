@@ -22,8 +22,18 @@
 
     <h2>Products in stock:</h2>
     <ul>
-        <li ng-repeat="p in ctrl.products">{{p.name}} -- {{p.producer}} -- {{p.kcal}}</li>
+        <li ng-repeat="p in ctrl.products" ng-mouseenter="ctrl.loadById(p.id)" ng-mouseleave="ctrl.zeroDown()">{{p.name}}</li>
     </ul>
+
+
+<div ng-show="ctrl.details">
+    <h2> {{ctrl.details.name}}</h2>
+    <p>Producer: {{ctrl.details.producer}} || kcal: {{ctrl.details.kcal}}</p>
+
+</div>
+
+
+
 </div>
 
 </body>

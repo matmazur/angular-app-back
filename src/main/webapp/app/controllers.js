@@ -37,6 +37,10 @@ angular.module("app")
 
         vm.loadById = function(id){
             vm.details = Product.get({productId:id});
+            console.log("click");
+        };
+        vm.zeroDown = function(){
+            vm.details=null;
         };
 
         refreshData();
