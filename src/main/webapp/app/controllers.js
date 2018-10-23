@@ -10,14 +10,17 @@ angular.module("app")
 
         function refreshData() {
 
-            $http.get("api/products")
-                .then(function success(response) {
-                        vm.products = response.data;
-                    }, function error(response) {
-                        console.log("API error " + response.status)
 
-                    }
-                );
+            vm.products = Result.query(
+                function success(data,headers) {
+                    console.log("Acquired data: " + data);
+                    console.log("Acquired headers: " + headers);
+                },
+                function error(response) {
+                    console.log(response.status);
+                });
+
+
         }
 
         vm.addProduct = function (product) {
